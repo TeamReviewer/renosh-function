@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "name": "InputBlob",
+      "path": "epub/{name}.epub",
+      "connection": "renoshStorage",
+      "direction": "in",
+      "type": "blobTrigger"
+    },
+    {
+      "name": "outputDocument",
+      "databaseName": "renosh",
+      "collectionName": "book",
+      "createIfNotExists": true,
+      "connectionStringSetting": "renosh_DOCUMENTDB",
+      "direction": "out",
+      "type": "cosmosDB"
+    }
+  ]
+}
